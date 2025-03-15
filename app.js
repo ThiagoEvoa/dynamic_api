@@ -18,9 +18,5 @@ app.use((err, req, res, next) => {
     res.status(422).send({ error: err.message })
 })
 
-// app.listen(8080, () => {
-//     console.log(`Listening in 8080...`)
-// })
-
-http.createServer(app).listen(8080, ()=>{console.log(`HTTP Listening in 8080...`)})
-https.createServer(credentials, app).listen(8081, ()=>{console.log(`HTTPS Listening in 8081...`)})
+http.createServer(app).listen(9010, ()=>{console.log(`HTTP Listening in 8080...`)})
+https.createServer(credentials, app).listen(9011, ()=>{console.log(`HTTPS Listening in 8081...`)})

@@ -2,6 +2,7 @@ const controller = require('express').Router()
 
 let obj = {}
 
+
 controller.get('/', (req, res, next) => {
     res.send(obj)
 })

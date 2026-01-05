@@ -1,7 +1,7 @@
 
-# Dynamically API
+# Dynamic API
 
-Just an API to dynamically store a JSON and return it as a HTTP response.
+Just an API to dynamically store a JSON and return it as a HTTP/HTTPS response.
 
 
 ## Run Locally
@@ -30,26 +30,18 @@ Start the server
   node app.js
 ```
 
-
 ## Running Tests
 
 Store JSON
 
 ```bash
-  curl  -X POST \
-  'http://192.168.1.133:8080/api/' \
-  --header 'Accept: */*' \
-  --header 'Content-Type: application/json' \
-  --data-raw '{
-  "phrase": "hello world"
-}'
+curl --location 'https://localhost:9011/api' \
+--header 'Content-Type: application/json' \
+--data '{}'
 ```
 
 Retrieve JSON
 
 ```bash
-  curl  -X GET \
-  'http://192.168.1.133:8080/api/' \
-  --header 'Accept: */*' \
-  --header 'Content-Type: application/json'
+curl --location 'https://localhost:9011/api/'
 ```

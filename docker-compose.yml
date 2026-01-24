@@ -1,12 +1,19 @@
 services:
-  dynamic-api:  # <--- This name MUST match what you put in Cloudflare
+  dynamic-api:
     build: .
     restart: always
-    # You don't need 'ports:' here since the tunnel is inside the network
-  
+    networks:
+      - tunnel_net
+
   tunnel:
     image: cloudflare/cloudflared:latest
     restart: always
     command: tunnel run
     environment:
       - TUNNEL_TOKEN=${TUNNEL_TOKEN}
+    networks:
+      - tunnel_net
+
+networks:
+  tunnel_net:
+    driver: bridge

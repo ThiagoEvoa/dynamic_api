@@ -1,5 +1,5 @@
 services:
-  dynamic_api:  # <--- This name MUST match what you put in Cloudflare
+  dynamic-api:  # <--- This name MUST match what you put in Cloudflare
     build: .
     restart: always
     # You don't need 'ports:' here since the tunnel is inside the network

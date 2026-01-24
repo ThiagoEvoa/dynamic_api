@@ -18,7 +18,7 @@ services:
     networks:
       - tunnel_net
     depends_on:
-      - api
+      - dynamic-api
 
 networks:
   tunnel_net:

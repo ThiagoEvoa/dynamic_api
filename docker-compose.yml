@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   dynamic-api:
     container_name: dynamic-api-app  # This forces a simple name

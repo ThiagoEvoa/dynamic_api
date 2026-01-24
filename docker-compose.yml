@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  my-api:
+    build: .
+    restart: always
+    ports:
+      - "9010:9010" # HTTP
+      - "9011:9011" # HTTPS
+    volumes:
+      # Mount your SSL certs folder from the Pi to the Container
+      # Format: /path/on/raspberrypi:/path/inside/container
+      - ./certs:/usr/src/app/certs:ro

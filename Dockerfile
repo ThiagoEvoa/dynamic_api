@@ -1,6 +1,6 @@
 FROM node:20-alpine
 
-WORKDIR /home/pi0/dynamic_api
+WORKDIR /usr/src/app
 
 COPY package*.json ./
 RUN npm install --production

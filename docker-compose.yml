@@ -1,6 +1,6 @@
 version: '3.8'
 services:
-  api:
+  dynamic-api:
     container_name: dynamic-api-app  # This forces a simple name
     build: .
     restart: always

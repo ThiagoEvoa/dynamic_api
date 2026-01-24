@@ -1,18 +1,12 @@
-version: '3.8'
 services:
-  api:
+  dynamic_api:  # <--- This name MUST match what you put in Cloudflare
     build: .
     restart: always
-    # We don't even need 'ports:' here anymore! 
-    # The tunnel talks to the API over the internal Docker network.
-    expose:
-      - "9010"
-
+    # You don't need 'ports:' here since the tunnel is inside the network
+  
   tunnel:
     image: cloudflare/cloudflared:latest
     restart: always
     command: tunnel run
     environment:
-      - TUNNEL_TOKEN=${TUNNEL_TOKEN} # Get this from Cloudflare Zero Trust Dashboard
-
-      
+      - TUNNEL_TOKEN=${TUNNEL_TOKEN}

@@ -13,6 +13,6 @@ services:
     restart: always
     command: tunnel run
     environment:
-      - TUNNEL_TOKEN=eyJhIjoiYjcyMzM4NzAwNWM0YWMyMjI1ZGNkZWRlYWZhODU5YzgiLCJ0IjoiYWNlZjM3YjktYjNhNy00MjI5LTg5MzYtNjNhMDdjNjMxNWM0IiwicyI6Ik5qTm1OVGMxTnpjdFpEVTBaUzAwTUdGbExXRTVZVEF0TmpZMVlUY3pPV1ppTldNMSJ9 # Get this from Cloudflare Zero Trust Dashboard
+      - TUNNEL_TOKEN=${TUNNEL_TOKEN} # Get this from Cloudflare Zero Trust Dashboard
 
       
